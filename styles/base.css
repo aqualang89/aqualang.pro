@@ -1,0 +1,47 @@
+:root{
+  --bg:#0A0C0F;
+  --bg-2:#11151A;
+  --bg-3:#181D24;
+  --line:rgba(255,255,255,.08);
+  --line-2:rgba(255,255,255,.16);
+  --fg:#EAEDEF;
+  --fg-2:#9AA3AB;
+  --fg-3:#5E6770;
+  --mint:#7EE8D3;
+  --mint-2:#A8F3E1;
+  --ink:#0A0C0F;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--fg);font-family:"Manrope",sans-serif;-webkit-font-smoothing:antialiased;cursor:none}
+html.lenis{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto !important}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+.lenis.lenis-stopped{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:none}
+::selection{background:var(--mint);color:var(--ink)}
+body{overflow-x:hidden}
+
+.serif{font-family:"Fraunces",serif;font-weight:300;letter-spacing:-.03em;line-height:.9}
+.mono{font-family:"JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase;font-size:11px;color:var(--fg-2)}
+.it{font-style:italic;font-weight:300}
+
+.mask-line{display:block;overflow:hidden;line-height:.95}
+.mask-line > span{display:block;transform:translateY(110%);transition:transform 1.1s cubic-bezier(.2,.7,.1,1)}
+.mask-line.in > span{transform:translateY(0)}
+.by-letter .l{display:inline-block;transform:translateY(110%);opacity:0;transition:transform .8s cubic-bezier(.2,.7,.1,1),opacity .8s}
+.by-letter.in .l{transform:translateY(0);opacity:1}
+.fade{opacity:0;transform:translateY(20px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.1,1)}
+.fade.in{opacity:1;transform:none}
+
+.cur{position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;background:var(--mint);pointer-events:none;z-index:1000;mix-blend-mode:difference;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s}
+.cur.big{width:84px;height:84px;background:transparent;border:1px solid var(--mint)}
+.cur-label{position:fixed;top:0;left:0;pointer-events:none;z-index:1001;color:var(--mint);font-family:"JetBrains Mono",monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;transform:translate(-50%,-50%);opacity:0;transition:opacity .2s}
+.cur-label.show{opacity:1}
+
+@media (max-width:880px){
+  html,body{cursor:auto}
+  button,a{cursor:pointer}
+  .cur,.cur-label{display:none}
+}

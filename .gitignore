@@ -1,0 +1,13 @@
+.env
+.env.local
+.env.*.local
+.vercel
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+STATE.md
+PROJECT_STATE.md
+.idea/
+.vscode/
+_reference/

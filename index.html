@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>aqualang — ИИ-инженер · сайты, чаты, ассистенты, автоматизация</title>
+<meta name="description" content="Aqualang (Макс) — ИИ-инженер. Делаю сайты под ключ, ИИ-чаты по каталогу, ассистентов с памятью и SMM-автоматизацию для малого бизнеса. Прототип за 48 часов." />
+<meta name="keywords" content="ИИ инженер, AI чат, чат-бот по каталогу, автоматизация, SMM автоматизация, сайт под ключ, фриланс, GPT, Claude" />
+<meta name="author" content="Aqualang (Макс)" />
+<meta name="theme-color" content="#0A0C0F" />
+<meta name="color-scheme" content="dark" />
+<link rel="canonical" href="https://aqualang.pro/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://aqualang.pro/" />
+<meta property="og:title" content="aqualang — ИИ-инженер и автоматизация" />
+<meta property="og:description" content="Сайты, ИИ-чаты по каталогу, ассистенты с памятью, SMM на автопилоте. Прототип за 48 часов." />
+<meta property="og:image" content="https://aqualang.pro/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:locale:alternate" content="en_US" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="aqualang — ИИ-инженер и автоматизация" />
+<meta name="twitter:description" content="Сайты, ИИ-чаты, ассистенты, автоматизация. Прототип за 48 часов." />
+<meta name="twitter:image" content="https://aqualang.pro/og.png" />
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/favicon.svg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/styles/base.css" />
+<link rel="stylesheet" href="/styles/layout.css" />
+<link rel="stylesheet" href="/styles/components.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Max (Aqualang)",
+  "alternateName": "aqualang",
+  "url": "https://aqualang.pro",
+  "jobTitle": "AI Engineer",
+  "description": "ИИ-инженер: сайты под ключ, ИИ-чаты по каталогу, ассистенты с памятью, SMM-автоматизация",
+  "sameAs": ["https://t.me/aqualang", "https://github.com/aqualang89"]
+}
+</script>
+</head>
+<body>
+
+<div class="cur" id="cur"></div>
+<div class="cur-label" id="curLabel"></div>
+
+<nav class="top">
+  <a href="#hero" class="logo">aqua<i>lang</i></a>
+  <div class="links">
+    <a href="#services" data-magnetic data-ru="Услуги" data-en="Services">Услуги</a>
+    <a href="#process" data-magnetic data-ru="Процесс" data-en="Process">Процесс</a>
+    <a href="#about" data-magnetic data-ru="Обо мне" data-en="About">Обо мне</a>
+    <a href="#faq" data-magnetic>FAQ</a>
+    <a href="#contact" data-magnetic data-ru="Контакт" data-en="Contact">Контакт</a>
+  </div>
+  <div class="right">
+    <div class="lang" id="lang">
+      <button class="on" data-l="ru">RU</button>
+      <button data-l="en">EN</button>
+    </div>
+    <a href="#contact" class="cta" data-magnetic data-ru="Заявка →" data-en="Brief →">Заявка →</a>
+  </div>
+</nav>
+
+<section class="hero" id="hero">
+  <canvas id="threeCanvas"></canvas>
+  <div class="hero-vignette"></div>
+  <div class="hero-hint" id="heroHint">
+    <span class="k"><span class="pulse"></span><span data-ru="потяни сферу" data-en="drag the orb">потяни сферу</span></span>
+    <span class="k"><span data-ru="клик — взрыв" data-en="click — burst">клик — взрыв</span></span>
+    <span class="k"><span class="key">R</span><span data-ru="сброс" data-en="reset">сброс</span></span>
+    <span class="k"><span class="key">M</span><span data-ru="режим" data-en="mode">режим</span></span>
+  </div>
+
+  <div class="hero-top">
+    <div class="mono">
+      <div>[ AQ-001 / 2026 ]</div>
+      <div style="margin-top:6px">N 55°45′ · E 37°37′</div>
+    </div>
+    <div class="right mono">
+      <div data-ru="ИИ-инженер · автоматизация" data-en="AI engineer · automation">ИИ-инженер · автоматизация</div>
+      <div style="margin-top:6px;color:var(--mint)" id="liveTime">— — : — —</div>
+    </div>
+  </div>
+
+  <div class="hero-grid">
+    <div>
+      <div class="mono fade" style="margin-bottom:24px" data-ru="(01) Манифест" data-en="(01) Manifesto">(01) Манифест</div>
+      <h1 class="hero-title">
+        <span class="row mask-line"><span data-ru="Строю" data-en="I build">Строю</span></span>
+        <span class="row mask-line"><span class="it" data-ru="ИИ для" data-en="AI for">ИИ для</span></span>
+        <span class="row mask-line"><span data-ru="живого бизнеса." data-en="real business.">живого бизнеса.</span></span>
+      </h1>
+    </div>
+    <div class="hero-meta">
+      <div class="mono fade">[ Что внутри ]</div>
+      <p class="hero-sub fade" data-ru="Сайты, ИИ-чаты по каталогу и услугам, ассистенты с памятью, автоматизация SMM. Никаких готовых шаблонов — только то, что работает на вас." data-en="Websites, AI chats over your catalog, assistants with memory, SMM automation. No off-the-shelf templates — only what actually works for you.">Сайты, ИИ-чаты по каталогу и услугам, ассистенты с памятью, автоматизация SMM. Никаких готовых шаблонов — только то, что работает на вас.</p>
+      <a href="#contact" class="hero-cta fade" data-magnetic data-hover="написать">
+        <span data-ru="Обсудить задачу" data-en="Start a brief">Обсудить задачу</span>
+        <span class="arr">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="mono" data-ru="Скролл" data-en="Scroll">Скролл</div>
+    <div class="line"></div>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span class="row">
+      <em class="serif it">aqualang</em><span class="dot"></span>
+      <em class="serif">ИИ-ассистенты</em><span class="dot"></span>
+      <em class="serif it">автоматизация</em><span class="dot"></span>
+      <em class="serif">сайты под ключ</em><span class="dot"></span>
+      <em class="serif it">SMM·auto</em><span class="dot"></span>
+      <em class="serif">чаты по каталогу</em><span class="dot"></span>
+    </span>
+    <span class="row">
+      <em class="serif it">aqualang</em><span class="dot"></span>
+      <em class="serif">ИИ-ассистенты</em><span class="dot"></span>
+      <em class="serif it">автоматизация</em><span class="dot"></span>
+      <em class="serif">сайты под ключ</em><span class="dot"></span>
+      <em class="serif it">SMM·auto</em><span class="dot"></span>
+      <em class="serif">чаты по каталогу</em><span class="dot"></span>
+    </span>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <div class="services-head">
+    <div class="num fade">02</div>
+    <h2 class="mask-line"><span data-ru="Что я &nbsp;<i class='it'>делаю</i>." data-en="What I &nbsp;<i class='it'>do</i>.">Что я <span class="it">делаю</span>.</span></h2>
+  </div>
+
+  <div class="h-scroll" id="hscroll">
+    <div class="h-scroll-pin">
+      <div class="h-track" id="htrack">
+        <article class="s-card" data-tilt data-hover="смотреть">
+          <div class="glow"></div>
+          <div class="visual"><svg viewBox="0 0 200 200" preserveAspectRatio="none"><defs><pattern id="g1" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M0 0 L20 20 M20 0 L0 20" stroke="#7EE8D3" stroke-width=".4" opacity=".6"/></pattern></defs><rect width="200" height="200" fill="url(#g1)"/></svg></div>
+          <div>
+            <div class="num">01 / SITE</div>
+            <h3 style="margin-top:14px"><span data-ru="Сайты" data-en="Websites">Сайты</span><br/><span class="it" data-ru="под ключ" data-en="end-to-end">под ключ</span></h3>
+          </div>
+          <div>
+            <p class="desc" data-ru="Лендинги, портфолио, продуктовые сайты. Быстро и с упором на анимации, интерактив и продающую логику." data-en="Landings, portfolios, product sites. Fast, with focus on animation, interaction and conversion.">Лендинги, портфолио, продуктовые сайты. Быстро и с упором на анимации, интерактив и продающую логику.</p>
+          </div>
+          <div class="meta">
+            <span data-ru="От 5 дней" data-en="From 5 days">От 5 дней</span>
+            <span>·</span>
+            <span>HTML·CSS·JS</span>
+          </div>
+        </article>
+
+        <article class="s-card" data-tilt data-hover="смотреть">
+          <div class="glow"></div>
+          <div class="visual"><svg viewBox="0 0 200 200" preserveAspectRatio="none"><circle cx="100" cy="100" r="60" fill="none" stroke="#7EE8D3" stroke-width=".5"/><circle cx="100" cy="100" r="80" fill="none" stroke="#7EE8D3" stroke-width=".3"/><circle cx="100" cy="100" r="40" fill="none" stroke="#7EE8D3" stroke-width=".7"/></svg></div>
+          <div>
+            <div class="num">02 / CHAT</div>
+            <h3 style="margin-top:14px"><span data-ru="ИИ-чаты" data-en="AI chats">ИИ-чаты</span><br/><span class="it" data-ru="по каталогу" data-en="over catalog">по каталогу</span></h3>
+          </div>
+          <div>
+            <p class="desc" data-ru="Чат, который знает ваш товар, услуги и цены. Отвечает 24/7, советует, продаёт. Подключается к сайту, телеге, WhatsApp." data-en="A chat that knows your products, services and pricing. Answers 24/7, advises, sells. Plugs into site, Telegram, WhatsApp.">Чат, который знает ваш товар, услуги и цены. Отвечает 24/7, советует, продаёт. Подключается к сайту, телеге, WhatsApp.</p>
+          </div>
+          <div class="meta">
+            <span data-ru="Запуск 7-14 дней" data-en="7-14 days">Запуск 7-14 дней</span>
+            <span>·</span>
+            <span>RAG · GPT · Claude</span>
+          </div>
+        </article>
+
+        <article class="s-card" data-tilt data-hover="смотреть">
+          <div class="glow"></div>
+          <div class="visual"><svg viewBox="0 0 200 200" preserveAspectRatio="none"><g stroke="#7EE8D3" stroke-width=".4" fill="none"><path d="M20 100 Q60 40 100 100 T180 100"/><path d="M20 110 Q60 50 100 110 T180 110"/><path d="M20 120 Q60 60 100 120 T180 120"/><path d="M20 90 Q60 30 100 90 T180 90"/><path d="M20 80 Q60 20 100 80 T180 80"/></g></svg></div>
+          <div>
+            <div class="num">03 / ASSIST</div>
+            <h3 style="margin-top:14px"><span data-ru="ИИ-" data-en="AI">ИИ-</span><span class="it" data-ru="ассистенты" data-en="assistants">ассистенты</span></h3>
+          </div>
+          <div>
+            <p class="desc" data-ru="Персональные ассистенты с памятью: бронь, расписание, документы, ответы клиентам. Учим на ваших данных и тоне голоса." data-en="Personal assistants with memory: bookings, schedules, docs, client replies. Trained on your data and voice.">Персональные ассистенты с памятью: бронь, расписание, документы, ответы клиентам. Учим на ваших данных и тоне голоса.</p>
+          </div>
+          <div class="meta">
+            <span data-ru="С памятью и API" data-en="With memory & API">С памятью и API</span>
+            <span>·</span>
+            <span>n8n · Make</span>
+          </div>
+        </article>
+
+        <article class="s-card" data-tilt data-hover="смотреть">
+          <div class="glow"></div>
+          <div class="visual"><svg viewBox="0 0 200 200" preserveAspectRatio="none"><g stroke="#7EE8D3" stroke-width=".4" fill="none"><rect x="20" y="20" width="40" height="40"/><rect x="80" y="20" width="40" height="40"/><rect x="140" y="20" width="40" height="40"/><rect x="20" y="80" width="40" height="40"/><rect x="80" y="80" width="40" height="40"/><rect x="140" y="80" width="40" height="40"/><rect x="20" y="140" width="40" height="40"/><rect x="80" y="140" width="40" height="40"/><rect x="140" y="140" width="40" height="40"/></g></svg></div>
+          <div>
+            <div class="num">04 / SMM</div>
+            <h3 style="margin-top:14px"><span data-ru="SMM" data-en="SMM">SMM</span><br/><span class="it" data-ru="на автопилоте" data-en="on autopilot">на автопилоте</span></h3>
+          </div>
+          <div>
+            <p class="desc" data-ru="Контент-машина: ИИ генерит, я ставлю на рельсы. Постинг, ответы в директе, аналитика, ретаргет — всё связано." data-en="A content machine: AI writes, I wire it up. Posting, DM replies, analytics, retargeting — all in one loop.">Контент-машина: ИИ генерит, я ставлю на рельсы. Постинг, ответы в директе, аналитика, ретаргет — всё связано.</p>
+          </div>
+          <div class="meta">
+            <span data-ru="С автопостингом" data-en="With autoposting">С автопостингом</span>
+            <span>·</span>
+            <span>TG · IG · VK</span>
+          </div>
+        </article>
+
+        <article class="s-card" data-tilt data-hover="связь" style="background:var(--mint);color:var(--ink);border-color:var(--mint)">
+          <div>
+            <div class="num" style="color:var(--ink)">05 / ?</div>
+            <h3 style="margin-top:14px;color:var(--ink)"><span data-ru="Что-то" data-en="Something">Что-то</span><br/><span class="it" data-ru="другое?" data-en="else?">другое?</span></h3>
+          </div>
+          <div>
+            <p class="desc" style="color:var(--ink);opacity:.8" data-ru="Если у вас странный кейс на стыке ИИ, кода и автоматизации — напишите. Скорее всего я возьмусь." data-en="If you have a weird AI/code/automation case — drop me a line. Most likely I'll take it.">Если у вас странный кейс на стыке ИИ, кода и автоматизации — напишите. Скорее всего я возьмусь.</p>
+          </div>
+          <div class="meta" style="color:var(--ink);border-color:rgba(0,0,0,.2)">
+            <span data-ru="Telegram → @aqualang" data-en="Telegram → @aqualang">Telegram → @aqualang</span>
+            <span>↗</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="process-head">
+    <div class="num fade">03</div>
+    <h2 class="mask-line"><span data-ru="Как мы &nbsp;<i class='it'>работаем</i>." data-en="How we &nbsp;<i class='it'>work</i>.">Как мы <span class="it">работаем</span>.</span></h2>
+  </div>
+  <div class="steps">
+    <div class="step fade">
+      <div class="n">01</div>
+      <h4><span data-ru="Звонок &amp;" data-en="Call &amp;">Звонок &amp;</span> <span class="it" data-ru="бриф" data-en="brief">бриф</span></h4>
+      <p data-ru="30 минут разговора. Понимаю задачу, аудиторию, KPI. Дальше — короткий бриф на 1 страницу." data-en="30 minutes on a call. I get the task, audience, KPI. Then — a one-pager brief.">30 минут разговора. Понимаю задачу, аудиторию, KPI. Дальше — короткий бриф на 1 страницу.</p>
+      <div class="duration" data-ru="День 1" data-en="Day 1">День 1</div>
+    </div>
+    <div class="step fade">
+      <div class="n">02</div>
+      <h4><span data-ru="Прототип за" data-en="Prototype in">Прототип за</span> <span class="it" data-ru="48 часов" data-en="48 hrs">48 часов</span></h4>
+      <p data-ru="Связка с ИИ-моделями выдаёт рабочий прототип за два дня. Без долгих макетов — сразу живое, чтобы пощупать." data-en="AI-paired workflow ships a working prototype in two days. No long mockups — straight to a live build to feel.">Связка с ИИ-моделями выдаёт рабочий прототип за два дня. Без долгих макетов — сразу живое, чтобы пощупать.</p>
+      <div class="duration" data-ru="2-3 день" data-en="Day 2-3">2-3 день</div>
+    </div>
+    <div class="step fade">
+      <div class="n">03</div>
+      <h4><span data-ru="Итерации" data-en="Iterations">Итерации</span> <span class="it" data-ru="вживую" data-en="live">вживую</span></h4>
+      <p data-ru="Правки делаем через звонки и быстрые комментарии. Никаких портянок в Notion на 3 экрана." data-en="Tweaks via quick calls and inline comments. No 3-screen Notion threads.">Правки делаем через звонки и быстрые комментарии. Никаких портянок в Notion на 3 экрана.</p>
+      <div class="duration" data-ru="4-7 день" data-en="Day 4-7">4-7 день</div>
+    </div>
+    <div class="step fade">
+      <div class="n">04</div>
+      <h4><span data-ru="Запуск &amp;" data-en="Launch &amp;">Запуск &amp;</span> <span class="it" data-ru="поддержка" data-en="support">поддержка</span></h4>
+      <p data-ru="Деплой, передача доступов, обучение. Дальше — наблюдаю, дорабатываю и оптимизирую под метрики." data-en="Deploy, handover, training. After — I watch, refine and optimize for metrics.">Деплой, передача доступов, обучение. Дальше — наблюдаю, дорабатываю и оптимизирую под метрики.</p>
+      <div class="duration" data-ru="День 7+" data-en="Day 7+">День 7+</div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-sticky">
+      <div class="photo">
+        <div class="ph-zoom">
+          <img src="/img/max-portrait.webp" alt="Макс — Aqualang" loading="lazy" decoding="async" />
+        </div>
+        <div class="ph-stripe"></div>
+        <div class="ph-label">// MAX · AQUALANG</div>
+        <div class="badge">FIG.02</div>
+      </div>
+      <div class="cap">
+        <span data-ru="Aqualang, 2026" data-en="Aqualang, 2026">Aqualang, 2026</span>
+        <span>RAW · 35MM</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <div class="num fade">04</div>
+      <p class="lead mask-line"><span data-ru="Я не агентство. Я <i class='it'>один человек</i> с одним ноутбуком и десятком ИИ-моделей под рукой." data-en="I'm not an agency. I'm <i class='it'>one person</i> with one laptop and ten AI models on tap.">Я не агентство. Я <span class="it">один человек</span> с одним ноутбуком и десятком ИИ-моделей под рукой.</span></p>
+      <div class="body fade">
+        <p data-ru="Делаю сайты, ИИ-чаты, ассистентов и SMM-автоматизации для малого бизнеса и предпринимателей. Без раздутой команды, без месяцев согласований, без 'давайте вернёмся к этому в Q2'." data-en="I build websites, AI chats, assistants and SMM automation for small businesses and founders. No bloated team, no months of approvals, no 'let's revisit this in Q2'.">Делаю сайты, ИИ-чаты, ассистентов и SMM-автоматизации для малого бизнеса и предпринимателей. Без раздутой команды, без месяцев согласований, без 'давайте вернёмся к этому в Q2'.</p>
+      </div>
+      <div class="about-stats fade">
+        <div class="stat"><div class="n">40<span class="it">+</span></div><div class="l" data-ru="Проектов в работе" data-en="Projects shipped">Проектов в работе</div></div>
+        <div class="stat"><div class="n">7<span class="it">×</span></div><div class="l" data-ru="Быстрее агентств" data-en="Faster than agencies">Быстрее агентств</div></div>
+        <div class="stat"><div class="n">24<span class="it">/</span>7</div><div class="l" data-ru="Ассистенты" data-en="Assistants run 24/7">Ассистенты</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="faq-head">
+    <div class="num fade">05</div>
+    <h2 class="mask-line"><span data-ru="Частые &nbsp;<i class='it'>вопросы</i>." data-en="Common &nbsp;<i class='it'>questions</i>.">Частые <span class="it">вопросы</span>.</span></h2>
+  </div>
+  <div class="faq-list" id="faqList">
+    <div class="q">
+      <div class="q-row">
+        <div class="num">/01</div>
+        <h4 data-ru="Сколько стоит сайт или ИИ-чат?" data-en="How much for a site or AI chat?">Сколько стоит сайт или ИИ-чат?</h4>
+        <div class="plus">+</div>
+      </div>
+      <div class="q-body"><div><p data-ru="Зависит от объёма. Простой лендинг — от 50к₽, сайт-портфолио с анимациями — от 120к₽, ИИ-чат с подключением к каталогу — от 80к₽. Точнее скажу после 30-минутного брифа." data-en="Depends on scope. Simple landing — from $700, animated portfolio site — from $1.5k, AI chat over your catalog — from $1k. Exact number after a 30-min brief.">Зависит от объёма. Простой лендинг — от 50к₽, сайт-портфолио с анимациями — от 120к₽, ИИ-чат с подключением к каталогу — от 80к₽. Точнее скажу после 30-минутного брифа.</p></div></div>
+    </div>
+    <div class="q">
+      <div class="q-row">
+        <div class="num">/02</div>
+        <h4 data-ru="А вы один или есть команда?" data-en="Are you solo or a team?">А вы один или есть команда?</h4>
+        <div class="plus">+</div>
+      </div>
+      <div class="q-body"><div><p data-ru="Один. Это плюс — вы общаетесь напрямую с исполнителем, решения идут за часы, а не за недели. Для больших задач подключаю проверенных дизайнеров и копирайтеров." data-en="Solo. That's a feature — you talk straight to the maker, decisions take hours, not weeks. For bigger jobs I bring in trusted designers and copywriters.">Один. Это плюс — вы общаетесь напрямую с исполнителем, решения идут за часы, а не за недели. Для больших задач подключаю проверенных дизайнеров и копирайтеров.</p></div></div>
+    </div>
+    <div class="q">
+      <div class="q-row">
+        <div class="num">/03</div>
+        <h4 data-ru="Сможет ли ИИ-чат работать с моим каталогом?" data-en="Will AI chat work with my catalog?">Сможет ли ИИ-чат работать с моим каталогом?</h4>
+        <div class="plus">+</div>
+      </div>
+      <div class="q-body"><div><p data-ru="Да. Подключаю к Excel/Notion/Google Sheets, к 1С через API, к любой CMS. Чат знает ваш ассортимент, цены, наличие, может рекомендовать и оформлять заказ." data-en="Yes. I connect to Excel/Notion/Google Sheets, 1C via API, any CMS. The chat knows your products, pricing, stock — can recommend and place orders.">Да. Подключаю к Excel/Notion/Google Sheets, к 1С через API, к любой CMS. Чат знает ваш ассортимент, цены, наличие, может рекомендовать и оформлять заказ.</p></div></div>
+    </div>
+    <div class="q">
+      <div class="q-row">
+        <div class="num">/04</div>
+        <h4 data-ru="Что с поддержкой после запуска?" data-en="What about post-launch support?">Что с поддержкой после запуска?</h4>
+        <div class="plus">+</div>
+      </div>
+      <div class="q-body"><div><p data-ru="Первый месяц — правки и наблюдение бесплатно. Дальше можно перейти на ежемесячный пакет: мониторинг, обновления контента, обучение модели на новых данных." data-en="First month — tweaks and monitoring on the house. After that, monthly retainer: monitoring, content updates, model retraining on new data.">Первый месяц — правки и наблюдение бесплатно. Дальше можно перейти на ежемесячный пакет: мониторинг, обновления контента, обучение модели на новых данных.</p></div></div>
+    </div>
+    <div class="q">
+      <div class="q-row">
+        <div class="num">/05</div>
+        <h4 data-ru="Где базируются модели и данные?" data-en="Where do models and data live?">Где базируются модели и данные?</h4>
+        <div class="plus">+</div>
+      </div>
+      <div class="q-body"><div><p data-ru="Зависит от запроса. По умолчанию — облачные модели (OpenAI, Anthropic, Mistral) и российские провайдеры. Под чувствительные данные — локальные опенсорс-модели на вашем сервере." data-en="Depends on the case. Default — cloud models (OpenAI, Anthropic, Mistral). For sensitive data — local open-source models on your server.">Зависит от запроса. По умолчанию — облачные модели (OpenAI, Anthropic, Mistral) и российские провайдеры. Под чувствительные данные — локальные опенсорс-модели на вашем сервере.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-bg"><div class="big">aqua</div></div>
+  <div class="contact-grid">
+    <div>
+      <div class="mono fade" style="margin-bottom:24px">(06) <span data-ru="Заявка" data-en="Brief">Заявка</span></div>
+      <h2 class="mask-line"><span data-ru="Напишите &nbsp;<i class='it'>письмо.</i>" data-en="Send the &nbsp;<i class='it'>brief.</i>">Напишите <span class="it">письмо.</span></span></h2>
+      <form class="form" id="briefForm" novalidate>
+        <div class="field">
+          <label data-ru="Как обращаться" data-en="Your name">Как обращаться</label>
+          <input type="text" name="name" placeholder="Алексей" autocomplete="name" />
+        </div>
+        <div class="field">
+          <label>Telegram / e-mail</label>
+          <input type="text" name="contact" placeholder="@username" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label data-ru="Что нужно" data-en="What you need">Что нужно</label>
+          <div class="pills" id="pills">
+            <button type="button" class="pill on" data-ru="Сайт" data-en="Website">Сайт</button>
+            <button type="button" class="pill" data-ru="ИИ-чат" data-en="AI chat">ИИ-чат</button>
+            <button type="button" class="pill" data-ru="Ассистент" data-en="Assistant">Ассистент</button>
+            <button type="button" class="pill" data-ru="SMM-авто" data-en="SMM auto">SMM-авто</button>
+            <button type="button" class="pill" data-ru="Что-то ещё" data-en="Other">Что-то ещё</button>
+          </div>
+        </div>
+        <div class="field">
+          <label data-ru="Кратко о задаче" data-en="Brief">Кратко о задаче</label>
+          <textarea name="brief" placeholder="..."></textarea>
+        </div>
+        <button type="submit" class="submit" data-magnetic data-hover="отправить">
+          <span data-ru="Отправить" data-en="Send">Отправить</span>
+          <span class="arr">→</span>
+        </button>
+        <div class="form-status" aria-live="polite"></div>
+      </form>
+    </div>
+    <div class="contact-side">
+      <div>
+        <div class="row" style="margin-bottom:32px">
+          <div class="l" data-ru="Прямой контакт" data-en="Direct">Прямой контакт</div>
+          <div class="v">@<span class="it">aqualang</span></div>
+        </div>
+        <div class="row" style="margin-bottom:32px">
+          <div class="l" data-ru="Почта" data-en="Email">Почта</div>
+          <a class="v" href="mailto:aqualangpro@gmail.com">aqualangpro@<span class="it">gmail</span>.com</a>
+        </div>
+        <div class="row">
+          <div class="l" data-ru="Время ответа" data-en="Response time">Время ответа</div>
+          <div class="v"><span class="it">≈</span> 1–4 ч</div>
+        </div>
+        <div class="socials" style="margin-top:32px">
+          <a href="https://t.me/aqualang" target="_blank" rel="noopener" data-magnetic>Telegram ↗</a>
+          <a href="https://github.com/aqualang89" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+        </div>
+      </div>
+      <div class="clock">
+        <div><span class="dot"></span> <span data-ru="на связи" data-en="online">на связи</span></div>
+        <div id="clock2">— — : — —</div>
+        <div>MSK · UTC+3</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div>© 2026 Aqualang</div>
+  <a href="#hero" class="big-mark">aqua<i>lang</i></a>
+  <div data-ru="v.A.2 · Сделано вручную, ускорено ИИ" data-en="v.A.2 · Hand-built, AI-accelerated">v.A.2 · Сделано вручную, ускорено ИИ</div>
+</footer>
+
+<button id="chatFab" class="chat-fab" aria-label="Открыть AI-чат">
+  <span class="pulse-ring"></span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
+
+<div id="chatOverlay" class="chat-overlay" role="dialog" aria-modal="true" aria-label="AI-чат aqualang">
+  <div class="chat-window">
+    <div class="chat-head">
+      <div>
+        <div class="title">aqua<i>lang</i> · AI</div>
+        <div class="sub" data-ru="спрашивай про услуги и цены" data-en="ask about services and pricing">спрашивай про услуги и цены</div>
+      </div>
+      <button class="close" id="chatClose" aria-label="Закрыть">×</button>
+    </div>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="chat-foot">
+      <textarea id="chatInput" rows="1" placeholder="напиши сообщение…"></textarea>
+      <button id="chatSend" class="send" aria-label="Отправить">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+<script src="/scripts/main.js" defer></script>
+<script src="/scripts/hero-three.js" defer></script>
+<script src="/scripts/chat-widget.js" defer></script>
+<script src="/scripts/form.js" defer></script>
+</body>
+</html>
