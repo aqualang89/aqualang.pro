@@ -39,9 +39,9 @@
       return 42.*dot(m*m,vec4(dot(p0,x0),dot(p1,x1),dot(p2,x2),dot(p3,x3)));
     }`;
 
-  // на мобиле уменьшаем геометрию ради FPS
+  // detail icosahedron: на 80 это ~50k вершин — overkill для шейдера, тормозит TBT
   const isMobile = window.matchMedia('(max-width: 880px)').matches;
-  const detail = isMobile ? 40 : 80;
+  const detail = isMobile ? 16 : 32;
   const geo = new THREE.IcosahedronGeometry(1.15, detail);
 
   const uniforms = {
@@ -181,7 +181,7 @@
 
   const raycaster = new THREE.Raycaster();
   const ndc = new THREE.Vector2();
-  const hitGeo = new THREE.SphereGeometry(1.15, 32, 32);
+  const hitGeo = new THREE.SphereGeometry(1.15, 16, 16);
   const hitMesh = new THREE.Mesh(hitGeo, new THREE.MeshBasicMaterial({ visible: false }));
   orb.add(hitMesh);
 
