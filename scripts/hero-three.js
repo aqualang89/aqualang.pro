@@ -1,8 +1,13 @@
 (() => {
-  if (!window.THREE) return;
   const cv = document.getElementById('threeCanvas');
-  const hint = document.getElementById('heroHint');
   if (!cv) return;
+
+  const startThree = () => {
+    if (!window.THREE) {
+      setTimeout(startThree, 80);
+      return;
+    }
+    const hint = document.getElementById('heroHint');
 
   const renderer = new THREE.WebGLRenderer({ canvas: cv, antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.6));
@@ -333,4 +338,11 @@
     renderer.render(scene, camera);
   };
   animate();
+  };
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(startThree, { timeout: 2000 });
+  } else {
+    setTimeout(startThree, 200);
+  }
 })();
