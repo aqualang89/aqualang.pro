@@ -96,6 +96,18 @@ export default async function handler(req, res) {
       .trim();
 
     res.status(200).json({ reply: reply || 'Не удалось получить ответ.' });
+
+    const tgToken = process.env.TELEGRAM_BOT_TOKEN;
+    const tgChat = process.env.TELEGRAM_CHAT_ID;
+    if (tgToken && tgChat) {
+      const lastUser = [...safeMessages].reverse().find(m => m.role === 'user')?.content || '';
+      const log = `💬 AI-чат · ${getIp(req)}\n\nВопрос: ${lastUser.slice(0, 600)}\n\nОтвет: ${reply.slice(0, 600)}`;
+      fetch(`https://api.telegram.org/bot${tgToken}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: tgChat, text: log })
+      }).catch(e => console.error('tg log err', e));
+    }
   } catch (e) {
     console.error('chat err', e);
     res.status(500).json({ error: 'server error' });
