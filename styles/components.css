@@ -51,6 +51,10 @@
 .form-status{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3);margin-top:8px;min-height:14px}
 .form-status.ok{color:var(--mint)}
 .form-status.err{color:#ff8a80}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--fg-2);line-height:1.5;cursor:pointer;margin-top:-8px}
+.consent input[type=checkbox]{width:16px;height:16px;margin-top:2px;accent-color:var(--mint);cursor:pointer;flex-shrink:0}
+.consent a{color:var(--mint);border-bottom:1px solid rgba(126,232,211,.3)}
+.consent a:hover{border-bottom-color:var(--mint)}
 
 .chat-fab{position:fixed;right:24px;bottom:24px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--mint);color:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(126,232,211,.25);cursor:none;transition:transform .25s,box-shadow .25s}
 .chat-fab:hover{transform:scale(1.06);box-shadow:0 12px 40px rgba(126,232,211,.35)}

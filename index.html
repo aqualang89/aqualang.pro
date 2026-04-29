@@ -377,6 +377,10 @@
           <label data-ru="Кратко о задаче" data-en="Brief">Кратко о задаче</label>
           <textarea name="brief" placeholder="..."></textarea>
         </div>
+        <label class="consent">
+          <input type="checkbox" name="consent" required />
+          <span data-ru="Согласен с <a href='/privacy' target='_blank' rel='noopener'>обработкой данных</a>" data-en="I agree with <a href='/privacy' target='_blank' rel='noopener'>data processing</a>">Согласен с <a href="/privacy" target="_blank" rel="noopener">обработкой данных</a></span>
+        </label>
         <button type="submit" class="submit" data-magnetic data-hover="отправить">
           <span data-ru="Отправить" data-en="Send">Отправить</span>
           <span class="arr">→</span>
@@ -413,7 +417,7 @@
 </section>
 
 <footer class="foot">
-  <div>© 2026 Aqualang</div>
+  <div>© 2026 Aqualang · <a href="/privacy" data-ru="Политика" data-en="Privacy">Политика</a></div>
   <a href="#hero" class="big-mark">aqua<i>lang</i></a>
   <div data-ru="v.A.2 · Сделано вручную, ускорено ИИ" data-en="v.A.2 · Hand-built, AI-accelerated">v.A.2 · Сделано вручную, ускорено ИИ</div>
 </footer>

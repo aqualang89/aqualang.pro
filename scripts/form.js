@@ -26,10 +26,15 @@
     const name = form.querySelector('[name=name]').value.trim();
     const contact = form.querySelector('[name=contact]').value.trim();
     const brief = form.querySelector('[name=brief]').value.trim();
+    const consent = form.querySelector('[name=consent]').checked;
     const services = [...form.querySelectorAll('#pills .pill.on')].map(p => p.textContent.trim());
 
     if (!contact) {
       setStatus('укажи телеграм или e-mail', 'err');
+      return;
+    }
+    if (!consent) {
+      setStatus('поставь галочку согласия с политикой', 'err');
       return;
     }
 
