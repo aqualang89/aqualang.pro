@@ -53,6 +53,7 @@ section.process{padding:140px 32px;background:var(--bg-2);position:relative;bord
 .process-head h2{font-family:"Fraunces",serif;font-weight:300;font-size:clamp(56px,8vw,120px);letter-spacing:-.04em;line-height:.9}
 .process-head h2 .it{font-style:italic;color:var(--mint)}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.process-note{margin-top:32px;color:var(--fg-3);font-size:13px;line-height:1.55;font-style:italic;font-family:"Fraunces",serif;font-weight:300;max-width:560px}
 .step{padding:32px 24px 32px 0;border-right:1px solid var(--line);position:relative;display:flex;flex-direction:column;gap:14px;transition:background .3s}
 .step:last-child{border-right:0}
 .step:hover{background:var(--bg-3)}
