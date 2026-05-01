@@ -470,12 +470,17 @@
 (function(){
   var isMobile = window.matchMedia('(max-width: 880px)').matches;
   var add = function(src){ var s=document.createElement('script'); s.src=src; s.async=false; document.head.appendChild(s); };
-  if (isMobile) {
-    add('/scripts/hero-particles-2d.js');
-  } else {
+  var loadDesktop = function(){
     add('https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js');
     add('https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js');
     add('/scripts/hero-particles.js');
+  };
+  if (isMobile) {
+    add('/scripts/hero-particles-2d.js');
+  } else if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadDesktop, { timeout: 1500 });
+  } else {
+    setTimeout(loadDesktop, 200);
   }
 })();
 </script>

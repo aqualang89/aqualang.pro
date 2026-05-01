@@ -131,7 +131,7 @@
         hTrack.style.transform = `translateX(${-progress * distance}px)`;
       }
     };
-    if (lenis) lenis.on('scroll', onScroll); else window.addEventListener('scroll', onScroll);
+    if (window.__lenis) window.__lenis.on('scroll', onScroll); else window.addEventListener('scroll', onScroll, { passive: true });
   }
 
   const fmt = () => {
