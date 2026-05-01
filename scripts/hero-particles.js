@@ -57,6 +57,21 @@
     const camera = new THREE.PerspectiveCamera(36, cv.clientWidth / cv.clientHeight, 0.1, 100);
     camera.position.z = 11;
 
+    let minX = Infinity, maxX = -Infinity;
+    for (let i = 0; i < targets.length; i++) {
+      if (targets[i][0] < minX) minX = targets[i][0];
+      if (targets[i][0] > maxX) maxX = targets[i][0];
+    }
+    const textWidth = maxX - minX;
+    const verticalHalf = camera.position.z * Math.tan((camera.fov / 2) * Math.PI / 180);
+    const horizontalHalf = verticalHalf * camera.aspect;
+    const targetWidth = horizontalHalf * 2 * (isMobile ? 0.85 : 0.65);
+    const fitScale = targetWidth / textWidth;
+    for (let i = 0; i < targets.length; i++) {
+      targets[i][0] *= fitScale;
+      targets[i][1] *= fitScale;
+    }
+
     const positions = new Float32Array(N * 3);
     const targetArr = new Float32Array(N * 3);
     const randomArr = new Float32Array(N * 3);

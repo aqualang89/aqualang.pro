@@ -1,6 +1,7 @@
 (() => {
   let lenis;
-  if (window.Lenis) {
+  const isMobile = window.matchMedia('(max-width: 880px)').matches;
+  if (window.Lenis && !isMobile) {
     lenis = new Lenis({ lerp: 0.08, smoothWheel: true });
     const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
     requestAnimationFrame(raf);
