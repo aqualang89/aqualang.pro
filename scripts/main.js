@@ -1,8 +1,9 @@
 (() => {
-  let lenis;
   const isMobile = window.matchMedia('(max-width: 880px)').matches;
-  if (window.Lenis && !isMobile) {
-    lenis = new Lenis({ lerp: 0.08, smoothWheel: true });
+  const initLenis = () => {
+    if (isMobile) return;
+    if (!window.Lenis) { setTimeout(initLenis, 60); return; }
+    const lenis = new Lenis({ lerp: 0.08, smoothWheel: true });
     const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
     requestAnimationFrame(raf);
     document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -15,7 +16,8 @@
       });
     });
     window.__lenis = lenis;
-  }
+  };
+  initLenis();
 
   const langButtons = document.querySelectorAll('#lang button');
   const apply = lang => {

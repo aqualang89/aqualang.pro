@@ -469,7 +469,7 @@
 <script>
 (function(){
   var isMobile = window.matchMedia('(max-width: 880px)').matches;
-  var add = function(src){ var s=document.createElement('script'); s.src=src; s.defer=true; document.head.appendChild(s); };
+  var add = function(src){ var s=document.createElement('script'); s.src=src; s.async=false; document.head.appendChild(s); };
   if (isMobile) {
     add('/scripts/hero-particles-2d.js');
   } else {
