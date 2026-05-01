@@ -63,14 +63,17 @@
       if (targets[i][0] > maxX) maxX = targets[i][0];
     }
     const textWidth = maxX - minX;
-    const verticalHalf = camera.position.z * Math.tan((camera.fov / 2) * Math.PI / 180);
-    const horizontalHalf = verticalHalf * camera.aspect;
-    const targetWidth = horizontalHalf * 2 * (isMobile ? 0.85 : 0.65);
-    const fitScale = targetWidth / textWidth;
     const liftY = isMobile ? 0 : 1.6;
+    const widthRatio = isMobile ? 0.85 : 0.65;
+    const computeFit = () => {
+      const vh = camera.position.z * Math.tan((camera.fov / 2) * Math.PI / 180);
+      const hh = vh * camera.aspect;
+      return (hh * 2 * widthRatio) / textWidth;
+    };
+    let currentFit = computeFit();
     for (let i = 0; i < targets.length; i++) {
-      targets[i][0] *= fitScale;
-      targets[i][1] = targets[i][1] * fitScale + liftY;
+      targets[i][0] *= currentFit;
+      targets[i][1] = targets[i][1] * currentFit + liftY;
     }
 
     const positions = new Float32Array(N * 3);
@@ -183,8 +186,20 @@
       camera.aspect = w / h;
       camera.updateProjectionMatrix();
       mat.uniforms.uViewport.value = h;
+      const newFit = computeFit();
+      if (Math.abs(newFit - currentFit) > 0.001) {
+        const delta = newFit / currentFit;
+        for (let i = 0; i < N; i++) {
+          targetArr[i * 3] *= delta;
+          targetArr[i * 3 + 1] = (targetArr[i * 3 + 1] - liftY) * delta + liftY;
+        }
+        currentFit = newFit;
+      }
     };
     window.addEventListener('resize', () => { clearTimeout(resizeT); resizeT = setTimeout(resize, 120); });
+    if ('ResizeObserver' in window) {
+      new ResizeObserver(() => { clearTimeout(resizeT); resizeT = setTimeout(resize, 120); }).observe(cv);
+    }
     resize();
 
     let visible = true;
