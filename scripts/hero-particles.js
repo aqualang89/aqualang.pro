@@ -67,9 +67,10 @@
     const horizontalHalf = verticalHalf * camera.aspect;
     const targetWidth = horizontalHalf * 2 * (isMobile ? 0.85 : 0.65);
     const fitScale = targetWidth / textWidth;
+    const liftY = isMobile ? 0 : 1.6;
     for (let i = 0; i < targets.length; i++) {
       targets[i][0] *= fitScale;
-      targets[i][1] *= fitScale;
+      targets[i][1] = targets[i][1] * fitScale + liftY;
     }
 
     const positions = new Float32Array(N * 3);
