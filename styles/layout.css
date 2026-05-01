@@ -121,9 +121,17 @@ footer.foot .big-mark i{font-style:italic}
   nav.top .cta{display:none}
   section.hero{padding:120px 18px 80px}
   .hero-grid{grid-template-columns:1fr;gap:24px}
+  .hero-title{font-size:clamp(36px,11vw,72px)}
   .hero-meta{align-self:auto;align-items:flex-start;text-align:left;padding-top:0}
   .hero-cta{align-self:flex-start}
   .hero-hint{bottom:84px;font-size:10px;gap:10px;padding:8px 14px}
+  .services-head h2,
+  .process-head h2,
+  .faq-head h2,
+  .contact-grid h2{font-size:clamp(36px,9vw,72px)}
+  .about-text .lead{font-size:clamp(26px,7vw,44px)}
+  .about-text .num{font-size:64px}
+  .about-stats .stat .n{font-size:36px}
   .services-head{grid-template-columns:1fr;padding:0 18px 40px}
   .services-head h2{grid-column:1}
   .h-track{padding:0 18px}
