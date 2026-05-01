@@ -25,7 +25,7 @@
     const h = c.height = 360;
     const ctx = c.getContext('2d');
     ctx.fillStyle = '#fff';
-    ctx.font = '300 italic 240px "Fraunces", "Times New Roman", serif';
+    ctx.font = '400 italic 240px "Lora", "Times New Roman", serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText(text, w / 2, h / 2);
