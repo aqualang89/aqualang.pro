@@ -85,9 +85,20 @@
 .chat-foot .send:hover{background:var(--mint-2);transform:scale(1.06)}
 .chat-foot .send:disabled{opacity:.5;cursor:default;transform:none}
 
-@media (max-width:880px){
-  .s-card{width:88vw;height:560px;padding:24px}
-  .s-card h3{font-size:42px}
+@media (max-width:1200px){
+  .s-card{width:420px;height:520px;padding:24px}
+  .s-card h3{font-size:38px}
+  .q-row{grid-template-columns:60px 1fr 48px;gap:18px}
+  .q-body p{padding-left:78px;padding-right:24px}
+  .marquee-track{font-size:36px}
+  .chat-fab,.chat-foot textarea,.chat-foot .send,.chat-head .close,.q,.field input,.field textarea,.submit{cursor:pointer}
+  .chat-overlay{padding:12px}
+  .chat-window{width:min(420px,100%);height:min(620px,90vh);border-radius:18px;border:1px solid var(--line-2)}
+}
+
+@media (max-width:768px){
+  .s-card{width:88vw;height:auto;min-height:420px;padding:24px}
+  .s-card h3{font-size:32px}
   .q-row{grid-template-columns:48px 1fr 36px;gap:14px}
   .q-body p{padding-left:62px;padding-right:0}
   .marquee-track{font-size:32px}

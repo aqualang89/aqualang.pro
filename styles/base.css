@@ -40,8 +40,13 @@ body{overflow-x:hidden}
 .cur-label{position:fixed;top:0;left:0;pointer-events:none;z-index:1001;color:var(--mint);font-family:ui-monospace,"Cascadia Mono",Menlo,monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;transform:translate(-50%,-50%);opacity:0;transition:opacity .2s}
 .cur-label.show{opacity:1}
 
-@media (max-width:880px){
+@media (max-width:1200px){
   html,body{cursor:auto}
   button,a{cursor:pointer}
   .cur,.cur-label{display:none}
+}
+
+@media (max-width:768px){
+  html,body{cursor:auto}
+  button,a{cursor:pointer}
 }

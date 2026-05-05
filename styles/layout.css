@@ -115,38 +115,74 @@ footer.foot div:nth-child(3){text-align:right}
 footer.foot .big-mark{font-family:"Lora",serif;font-weight:300;font-size:20px;color:var(--mint);letter-spacing:-.02em;text-transform:lowercase}
 footer.foot .big-mark i{font-style:italic}
 
-@media (max-width:880px){
-  nav.top{padding:18px 18px}
+@media (max-width:1200px){
+  nav.top{padding:18px 24px}
   nav.top .links{display:none}
   nav.top .cta{display:none}
-  section.hero{padding:120px 18px 80px}
-  .hero-grid{grid-template-columns:1fr;gap:24px}
-  .hero-title{font-size:clamp(36px,11vw,72px)}
+  section.hero{padding:120px 24px 80px}
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero-title{font-size:clamp(48px,9vw,96px)}
   .hero-meta{align-self:auto;align-items:flex-start;text-align:left;padding-top:0}
   .hero-cta{align-self:flex-start}
   .hero-hint{bottom:84px;font-size:10px;gap:10px;padding:8px 14px}
   .services-head h2,
   .process-head h2,
   .faq-head h2,
-  .contact-grid h2{font-size:clamp(36px,9vw,72px)}
+  .contact-grid h2{font-size:clamp(42px,6vw,72px)}
+  .about-text .lead{font-size:clamp(30px,5vw,56px)}
+  .about-text .num{font-size:72px}
+  .about-stats .stat .n{font-size:42px}
+  .services-head{grid-template-columns:1fr;padding:0 24px 40px}
+  .services-head h2{grid-column:1}
+  .h-track{padding:0 24px}
+  section.process{padding:100px 24px}
+  .process-head{grid-template-columns:1fr;gap:24px;margin-bottom:40px}
+  .steps{grid-template-columns:repeat(2,1fr);gap:0}
+  .step{border-right:0;border-bottom:1px solid var(--line);padding:24px 0}
+  .step:nth-child(odd){border-right:1px solid var(--line);padding-right:16px}
+  .step:nth-child(even){padding-left:16px}
+  .step:last-child,.step:nth-last-child(2){border-bottom:0}
+  section.about{padding:100px 24px}
+  .about-grid{grid-template-columns:1fr;gap:40px;max-width:900px}
+  .about-sticky{position:relative;top:0}
+  section.faq{padding:100px 24px}
+  .faq-head{grid-template-columns:1fr;gap:24px}
+  .faq-head h2{grid-column:1}
+  section.contact{padding:100px 24px 40px}
+  .contact-grid{grid-template-columns:1fr;gap:40px;max-width:900px}
+  footer.foot{grid-template-columns:1fr 1fr 1fr;gap:8px}
+  footer.foot div:nth-child(2){text-align:center}
+  footer.foot div:nth-child(3){text-align:right}
+}
+
+@media (max-width:768px){
+  nav.top{padding:18px 18px}
+  section.hero{padding:120px 18px 80px}
+  .hero-grid{grid-template-columns:1fr;gap:24px}
+  .hero-title{font-size:clamp(36px,11vw,64px)}
+  .hero-hint{bottom:84px;font-size:10px;gap:10px;padding:8px 14px}
+  .services-head h2,
+  .process-head h2,
+  .faq-head h2,
+  .contact-grid h2{font-size:clamp(36px,9vw,64px)}
   .about-text .lead{font-size:clamp(26px,7vw,44px)}
   .about-text .num{font-size:64px}
   .about-stats .stat .n{font-size:36px}
-  .services-head{grid-template-columns:1fr;padding:0 18px 40px}
-  .services-head h2{grid-column:1}
+  .services-head{padding:0 18px 40px}
   .h-track{padding:0 18px}
   section.process{padding:80px 18px}
   .process-head{grid-template-columns:1fr;gap:24px;margin-bottom:40px}
   .steps{grid-template-columns:1fr;gap:0}
   .step{border-right:0;border-bottom:1px solid var(--line);padding:24px 0}
+  .step:nth-child(odd){border-right:0;padding-right:0}
+  .step:nth-child(even){padding-left:0}
   .step:last-child{border-bottom:0}
   section.about{padding:80px 18px}
-  .about-grid{grid-template-columns:1fr;gap:40px}
+  .about-grid{grid-template-columns:1fr;gap:40px;max-width:none}
   section.faq{padding:80px 18px}
   .faq-head{grid-template-columns:1fr;gap:24px}
-  .faq-head h2{grid-column:1}
   section.contact{padding:80px 18px 40px}
-  .contact-grid{grid-template-columns:1fr;gap:40px}
+  .contact-grid{grid-template-columns:1fr;gap:40px;max-width:none}
   footer.foot{grid-template-columns:1fr;gap:8px}
   footer.foot div{text-align:left !important}
 }
