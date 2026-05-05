@@ -1,4 +1,4 @@
-/* v3-laptop-fix */
+/* v4-mobile */
 .s-card{flex:0 0 auto;width:520px;height:640px;border:1px solid var(--line);background:var(--bg-2);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:32px;transition:background .4s,border-color .4s;transform-style:preserve-3d}
 .s-card:hover{background:var(--bg-3);border-color:var(--line-2)}
 .s-card .num{font-family:ui-monospace,"Cascadia Mono",Menlo,monospace;font-size:11px;color:var(--mint);letter-spacing:.1em}

@@ -32,9 +32,9 @@
 <link rel="preload" href="/fonts/lora.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/fonts/lora.css"></noscript>
 
-<link rel="stylesheet" href="/styles/base.css?v=3" />
-<link rel="stylesheet" href="/styles/layout.css?v=3" />
-<link rel="stylesheet" href="/styles/components.css?v=3" />
+<link rel="stylesheet" href="/styles/base.css?v=4" />
+<link rel="stylesheet" href="/styles/layout.css?v=4" />
+<link rel="stylesheet" href="/styles/components.css?v=4" />
 
 <script type="application/ld+json">
 {
@@ -93,7 +93,7 @@
 
   <div class="hero-grid">
     <div>
-      <div class="mono fade" style="margin-bottom:24px" data-ru="(01) Манифест" data-en="(01) Manifesto">(01) Манифест</div>
+      <div class="mono fade hero-manifest" style="margin-bottom:24px" data-ru="(01) Манифест" data-en="(01) Manifesto">(01) Манифест</div>
       <h1 class="hero-title">
         <span class="row mask-line"><span class="it" data-ru="Строю" data-en="I build">Строю</span></span>
         <span class="row mask-line"><span data-ru="ИИ для" data-en="AI for">ИИ для</span></span>
@@ -475,7 +475,7 @@
     add('/scripts/hero-particles.js');
   };
   if (isMobile) {
-    add('/scripts/hero-particles-2d.js');
+    add('/scripts/hero-particles-2d.js?v=4');
   } else if ('requestIdleCallback' in window) {
     requestIdleCallback(loadDesktop, { timeout: 1500 });
   } else {

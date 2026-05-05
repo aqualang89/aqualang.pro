@@ -1,4 +1,4 @@
-/* v3-laptop-fix */
+/* v4-mobile */
 @media (min-width:1920px){
   .hero-title{font-size:clamp(56px,9vw,160px)}
   .services-head h2,.process-head h2,.faq-head h2,.contact-grid h2{font-size:clamp(56px,8vw,120px)}
@@ -138,7 +138,7 @@ footer.foot .big-mark i{font-style:italic}
   .hero-title{font-size:clamp(48px,9vw,96px)}
   .hero-meta{align-self:auto;align-items:flex-start;text-align:left;padding-top:0}
   .hero-cta{align-self:flex-start}
-  .hero-hint{bottom:84px;font-size:10px;gap:10px;padding:8px 14px}
+  .hero-hint{display:none}
   .services-head h2,
   .process-head h2,
   .faq-head h2,
@@ -199,4 +199,6 @@ footer.foot .big-mark i{font-style:italic}
   .contact-grid{grid-template-columns:1fr;gap:40px;max-width:none}
   footer.foot{grid-template-columns:1fr;gap:8px}
   footer.foot div{text-align:left !important}
+  .hero-manifest{display:none}
+  .about-sticky .photo{aspect-ratio:4/3;max-height:45vh}
 }
