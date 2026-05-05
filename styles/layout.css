@@ -1,6 +1,11 @@
-/* v2-responsive */
+/* v3-laptop-fix */
+@media (min-width:1920px){
+  .hero-title{font-size:clamp(56px,9vw,160px)}
+  .services-head h2,.process-head h2,.faq-head h2,.contact-grid h2{font-size:clamp(56px,8vw,120px)}
+  .about-text .lead{font-size:clamp(36px,5vw,72px)}
+}
 @media (max-width:1440px){
-  .hero-title{font-size:clamp(56px,7vw,120px)}
+  .hero-title{font-size:clamp(48px,7vw,120px)}
   .services-head h2,.process-head h2,.faq-head h2,.contact-grid h2{font-size:clamp(48px,5vw,96px)}
   .about-text .lead{font-size:clamp(32px,3.5vw,56px)}
   .about-grid{gap:60px}
@@ -33,7 +38,7 @@ section.hero{position:relative;min-height:100vh;padding:128px 32px 56px;display:
 .hero-top .right{text-align:right;line-height:1.6}
 .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-top:auto}
 .hero-meta{align-self:start;padding-top:8vh}
-.hero-title{font-family:"Lora",serif;font-weight:300;letter-spacing:-.045em;line-height:.86;color:#fff;font-size:clamp(64px,12.5vw,200px)}
+.hero-title{font-family:"Lora",serif;font-weight:300;letter-spacing:-.045em;line-height:.86;color:#fff;font-size:clamp(48px,8vw,140px)}
 .hero-title .it{font-style:italic;color:var(--mint)}
 .hero-title .row{display:block;overflow:hidden}
 .hero-title .row > span{display:inline-block}
