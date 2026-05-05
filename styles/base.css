@@ -1,4 +1,4 @@
-/* v4-mobile */
+/* v5-scroll */
 :root{
   --bg:#0A0C0F;
   --bg-2:#11151A;
@@ -23,6 +23,10 @@ a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:none}
 ::selection{background:var(--mint);color:var(--ink)}
 body{overflow-x:hidden}
+
+@media (max-width:768px){
+  body{overflow-x:visible}
+}
 
 .serif{font-family:"Lora",serif;font-weight:300;letter-spacing:-.03em;line-height:.9}
 .mono{font-family:ui-monospace,"Cascadia Mono",Menlo,monospace;letter-spacing:.06em;text-transform:uppercase;font-size:11px;color:var(--fg-2)}

@@ -32,9 +32,9 @@
 <link rel="preload" href="/fonts/lora.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/fonts/lora.css"></noscript>
 
-<link rel="stylesheet" href="/styles/base.css?v=4" />
-<link rel="stylesheet" href="/styles/layout.css?v=4" />
-<link rel="stylesheet" href="/styles/components.css?v=4" />
+<link rel="stylesheet" href="/styles/base.css?v=5" />
+<link rel="stylesheet" href="/styles/layout.css?v=5" />
+<link rel="stylesheet" href="/styles/components.css?v=5" />
 
 <script type="application/ld+json">
 {
@@ -475,7 +475,7 @@
     add('/scripts/hero-particles.js');
   };
   if (isMobile) {
-    add('/scripts/hero-particles-2d.js?v=4');
+    add('/scripts/hero-particles-2d.js?v=5');
   } else if ('requestIdleCallback' in window) {
     requestIdleCallback(loadDesktop, { timeout: 1500 });
   } else {

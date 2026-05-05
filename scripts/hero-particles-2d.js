@@ -19,7 +19,7 @@
     const ctx = cv.getContext('2d');
     if (!ctx) return;
 
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
     let cw = 0, ch = 0;
     function resize() {
       cw = cv.clientWidth;
@@ -41,7 +41,7 @@
 
     const data = g.getImageData(0, 0, W, H).data;
     const pts = [];
-    const step = 4;
+    const step = 5;
     for (let y = 0; y < H; y += step) {
       for (let x = 0; x < W; x += step) {
         if (data[(y * W + x) * 4 + 3] > 128) {
@@ -98,6 +98,7 @@
       const blend = formProgress * (1 - scrollDispersion);
 
       ctx.clearRect(0, 0, cv.width, cv.height);
+      ctx.imageSmoothingEnabled = false;
       const cx = cv.width / 2;
       const liftY = ch * 0.14 * dpr;
       const cy = cv.height / 2 - liftY;

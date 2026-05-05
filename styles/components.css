@@ -1,4 +1,4 @@
-/* v4-mobile */
+/* v5-scroll */
 .s-card{flex:0 0 auto;width:520px;height:640px;border:1px solid var(--line);background:var(--bg-2);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:32px;transition:background .4s,border-color .4s;transform-style:preserve-3d}
 .s-card:hover{background:var(--bg-3);border-color:var(--line-2)}
 .s-card .num{font-family:ui-monospace,"Cascadia Mono",Menlo,monospace;font-size:11px;color:var(--mint);letter-spacing:.1em}
@@ -14,7 +14,7 @@
 .s-card:hover .glow{opacity:1}
 
 .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;overflow:hidden;white-space:nowrap;background:var(--bg);position:relative;z-index:5}
-.marquee-track{display:inline-flex;gap:60px;animation:mar 45s linear infinite;font-family:"Lora",serif;font-weight:300;font-size:48px;letter-spacing:-.02em}
+.marquee-track{display:inline-flex;gap:60px;animation:mar 45s linear infinite;font-family:"Lora",serif;font-weight:300;font-size:48px;letter-spacing:-.02em;will-change:transform}
 .marquee:hover .marquee-track{animation-play-state:paused}
 .marquee-track span.row{display:inline-flex;gap:60px;align-items:center}
 .marquee-track .dot{width:10px;height:10px;border-radius:50%;background:var(--mint)}
@@ -60,7 +60,7 @@
 .chat-fab{position:fixed;right:24px;bottom:24px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--mint);color:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(126,232,211,.25);cursor:none;transition:transform .25s,box-shadow .25s}
 .chat-fab:hover{transform:scale(1.06);box-shadow:0 12px 40px rgba(126,232,211,.35)}
 .chat-fab svg{width:26px;height:26px}
-.chat-fab .pulse-ring{position:absolute;inset:0;border-radius:50%;border:1px solid var(--mint);animation:chatPulse 2.4s ease-out infinite;pointer-events:none}
+.chat-fab .pulse-ring{position:absolute;inset:0;border-radius:50%;border:1px solid var(--mint);animation:chatPulse 2.4s ease-out infinite;pointer-events:none;will-change:transform,opacity}
 @keyframes chatPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.7);opacity:0}}
 
 .chat-overlay{position:fixed;inset:0;background:rgba(10,12,15,.78);backdrop-filter:blur(8px);z-index:80;display:none;align-items:flex-end;justify-content:flex-end;padding:24px}
