@@ -77,7 +77,7 @@ export default async function handler(req, res) {
         'X-Title': 'aqualang.pro'
       },
       body: JSON.stringify({
-        model: process.env.OPENROUTER_MODEL || 'anthropic/claude-3.5-sonnet',
+        model: process.env.OPENROUTER_MODEL || 'anthropic/claude-sonnet-latest',
         messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...safeMessages]
       })
     });
