@@ -10,6 +10,9 @@
 <meta name="theme-color" content="#0A0C0F" />
 <meta name="color-scheme" content="dark" />
 <link rel="canonical" href="https://aqualang.pro/" />
+<link rel="alternate" hreflang="ru" href="https://aqualang.pro/" />
+<link rel="alternate" hreflang="en" href="https://aqualang.pro/" />
+<link rel="alternate" hreflang="x-default" href="https://aqualang.pro/" />
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://aqualang.pro/" />
@@ -26,8 +29,9 @@
 <meta name="twitter:description" content="Сайты, ИИ-чаты, ассистенты, автоматизация. Прототип за 48 часов." />
 <meta name="twitter:image" content="https://aqualang.pro/og.png" />
 
-<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-<link rel="apple-touch-icon" href="/favicon.svg" />
+<link rel="icon" href="/favicon.png" type="image/png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 
 <link rel="preload" href="/fonts/lora.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/fonts/lora.css"></noscript>
@@ -45,7 +49,9 @@
   "url": "https://aqualang.pro",
   "jobTitle": "AI Engineer",
   "description": "ИИ-инженер: сайты под ключ, ИИ-чаты по каталогу, ассистенты с памятью, SMM-автоматизация",
-  "sameAs": ["https://t.me/aqualang"]
+  "image": "https://aqualang.pro/og.png",
+  "sameAs": ["https://t.me/aqualang"],
+  "knowsAbout": ["Веб-разработка", "ИИ-чатботы", "Автоматизация бизнеса", "SMM", "GPT", "Claude"]
 }
 </script>
 </head>
@@ -369,67 +375,16 @@
 
 <section class="contact" id="contact">
   <div class="contact-bg"><div class="big">aqua</div></div>
-  <div class="contact-grid">
+  <div class="contact-grid" style="grid-template-columns:1fr;max-width:900px">
     <div>
-      <div class="mono fade" style="margin-bottom:24px">(06) <span data-ru="Заявка" data-en="Brief">Заявка</span></div>
-      <h2 class="mask-line"><span data-ru="Напишите &nbsp;<i class='it'>письмо.</i>" data-en="Send the &nbsp;<i class='it'>brief.</i>">Напишите <span class="it">письмо.</span></span></h2>
-      <form class="form" id="briefForm" novalidate>
-        <div class="field">
-          <label data-ru="Как обращаться" data-en="Your name">Как обращаться</label>
-          <input type="text" name="name" placeholder="Алексей" autocomplete="name" />
-        </div>
-        <div class="field">
-          <label>Telegram / e-mail</label>
-          <input type="text" name="contact" placeholder="@username" autocomplete="email" required />
-        </div>
-        <div class="field">
-          <label data-ru="Что нужно" data-en="What you need">Что нужно</label>
-          <div class="pills" id="pills">
-            <button type="button" class="pill on" data-ru="Сайт" data-en="Website">Сайт</button>
-            <button type="button" class="pill" data-ru="Чат / бот" data-en="Chat / bot">Чат / бот</button>
-            <button type="button" class="pill" data-ru="Ассистент" data-en="Assistant">Ассистент</button>
-            <button type="button" class="pill" data-ru="Контент (визуал, видео)" data-en="Content (visual, video)">Контент (визуал, видео)</button>
-            <button type="button" class="pill" data-ru="SMM-авто" data-en="SMM auto">SMM-авто</button>
-            <button type="button" class="pill" data-ru="Что-то ещё" data-en="Other">Что-то ещё</button>
-          </div>
-        </div>
-        <div class="field">
-          <label data-ru="Кратко о задаче" data-en="Brief">Кратко о задаче</label>
-          <textarea name="brief" placeholder="..."></textarea>
-        </div>
-        <label class="consent">
-          <input type="checkbox" name="consent" required />
-          <span data-ru="Даю <a href='/consent' target='_blank' rel='noopener'>согласие на обработку</a> моих данных в соответствии с <a href='/privacy' target='_blank' rel='noopener'>политикой</a>" data-en="I give <a href='/consent' target='_blank' rel='noopener'>consent to data processing</a> in accordance with the <a href='/privacy' target='_blank' rel='noopener'>policy</a>">Даю <a href="/consent" target="_blank" rel="noopener">согласие на обработку</a> моих данных в соответствии с <a href="/privacy" target="_blank" rel="noopener">политикой</a></span>
-        </label>
-        <button type="submit" class="submit" data-magnetic data-hover="отправить">
-          <span data-ru="Отправить" data-en="Send">Отправить</span>
-          <span class="arr">→</span>
-        </button>
-        <div class="form-status" aria-live="polite"></div>
-      </form>
-    </div>
-    <div class="contact-side">
-      <div>
-        <div class="row" style="margin-bottom:32px">
-          <div class="l" data-ru="Прямой контакт" data-en="Direct">Прямой контакт</div>
-          <div class="v">@<span class="it">aqualang</span></div>
-        </div>
-        <div class="row" style="margin-bottom:32px">
-          <div class="l" data-ru="Почта" data-en="Email">Почта</div>
-          <a class="v" href="mailto:aqualangpro@gmail.com">aqualangpro@<span class="it">gmail</span>.com</a>
-        </div>
-        <div class="row">
-          <div class="l" data-ru="Время ответа" data-en="Response time">Время ответа</div>
-          <div class="v"><span class="it">≈</span> 1–4 ч</div>
-        </div>
-        <div class="socials" style="margin-top:32px">
-          <a href="https://t.me/aqualang" target="_blank" rel="noopener" data-magnetic>Telegram ↗</a>
-        </div>
+      <div class="mono fade" style="margin-bottom:24px">(06) <span data-ru="Контакт" data-en="Contact">Контакт</span></div>
+      <h2 class="mask-line"><span data-ru="Напишите &nbsp;<i class='it'>мне.</i>" data-en="Get in &nbsp;<i class='it'>touch.</i>">Напишите <span class="it">мне.</span></span></h2>
+      <div style="margin-top:48px;display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+        <a href="https://t.me/aqualang" target="_blank" rel="noopener" class="hero-cta" data-magnetic>Telegram ↗</a>
+        <a href="mailto:aqualangpro@gmail.com" class="hero-cta" data-magnetic>aqualangpro@<span class="it">gmail</span>.com</a>
       </div>
-      <div class="clock">
-        <div><span class="dot"></span> <span data-ru="на связи" data-en="online">на связи</span></div>
-        <div id="clock2">— — : — —</div>
-        <div>MSK · UTC+3</div>
+      <div style="margin-top:32px;color:var(--fg-3);font-size:14px;line-height:1.6">
+        <span data-ru="Время ответа ≈ 1–4 часа. MSK · UTC+3" data-en="Reply time ≈ 1–4 hours. MSK · UTC+3">Время ответа ≈ 1–4 часа. MSK · UTC+3</span>
       </div>
     </div>
   </div>
@@ -485,6 +440,6 @@
 </script>
 <script src="/scripts/main.js" defer></script>
 <script src="/scripts/chat-widget.js" defer></script>
-<script src="/scripts/form.js" defer></script>
+
 </body>
 </html>

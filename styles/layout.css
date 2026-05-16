@@ -21,7 +21,7 @@ nav.top .links a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;
 nav.top .links a:hover::after{transform:scaleX(1)}
 nav.top .right{display:flex;gap:18px;align-items:center}
 nav.top .lang{display:flex;gap:6px;font-family:ui-monospace,"Cascadia Mono",Menlo,monospace;font-size:11px;color:#fff}
-nav.top .lang button{padding:4px 8px;opacity:.5;border-radius:99px}
+nav.top .lang button{padding:10px 16px;opacity:.5;border-radius:99px;min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
 nav.top .lang button.on{opacity:1;border:1px solid rgba(255,255,255,.4)}
 nav.top .cta{padding:10px 18px;border-radius:99px;background:var(--mint);color:var(--ink);font-family:ui-monospace,"Cascadia Mono",Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;transition:transform .3s}
 

@@ -56,9 +56,9 @@ export default async function handler(req, res) {
     return;
   }
 
-  const apiKey = process.env.PERPLEXITY_API_KEY;
+  const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) {
-    res.status(500).json({ error: 'PERPLEXITY_API_KEY not set' });
+    res.status(500).json({ error: 'OPENROUTER_API_KEY not set' });
     return;
   }
 
@@ -68,21 +68,23 @@ export default async function handler(req, res) {
     .map(m => ({ role: m.role, content: m.content.slice(0, 2000) }));
 
   try {
-    const r = await fetch('https://api.perplexity.ai/chat/completions', {
+    const r = await fetch('https://openrouter.ai/api/v1/chat/completions', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'HTTP-Referer': 'https://aqualang.pro',
+        'X-Title': 'aqualang.pro'
       },
       body: JSON.stringify({
-        model: 'sonar-pro',
+        model: process.env.OPENROUTER_MODEL || 'anthropic/claude-3.5-sonnet',
         messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...safeMessages]
       })
     });
 
     if (!r.ok) {
       const txt = await r.text();
-      console.error('perplexity', r.status, txt);
+      console.error('openrouter', r.status, txt);
       res.status(502).json({ error: 'AI request failed' });
       return;
     }
