@@ -86,6 +86,32 @@
 .chat-foot .send:hover{background:var(--mint-2);transform:scale(1.06)}
 .chat-foot .send:disabled{opacity:.5;cursor:default;transform:none}
 
+/* case riparium */
+section.case{position:relative;background:var(--bg-2);padding:140px 32px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.case-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:60px;align-items:end;max-width:1500px;margin-left:auto;margin-right:auto}
+.case-head .num{font-family:"Lora",serif;font-style:italic;font-weight:300;font-size:96px;color:var(--mint);line-height:1}
+.case-head h2{font-family:"Lora",serif;font-weight:300;font-size:clamp(48px,6vw,96px);letter-spacing:-.04em;line-height:.9}
+.case-head h2 .it{font-style:italic;color:var(--mint)}
+.case-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center;max-width:1500px;margin:0 auto}
+.case-logo{position:relative;aspect-ratio:1/1;border:1px solid var(--line);background:#0f2240;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:8%}
+.case-logo img{width:100%;height:100%;object-fit:contain;transition:transform .8s cubic-bezier(.2,.7,.1,1)}
+.case-logo:hover img{transform:scale(1.04)}
+.case-logo .badge{position:absolute;top:18px;left:18px;font-family:ui-monospace,"Cascadia Mono",Menlo,monospace;font-size:10px;color:rgba(255,255,255,.7);letter-spacing:.18em;text-transform:uppercase}
+.case-logo .badge::before{content:"";display:inline-block;width:8px;height:8px;background:#4ade80;border-radius:50%;margin-right:8px;vertical-align:middle;box-shadow:0 0 12px #4ade80}
+.case-text .label{font-family:ui-monospace,"Cascadia Mono",Menlo,monospace;font-size:11px;color:var(--mint);letter-spacing:.15em;text-transform:uppercase}
+.case-text h3{font-family:"Lora",serif;font-weight:300;font-size:clamp(36px,4vw,56px);letter-spacing:-.03em;line-height:1;margin-top:14px}
+.case-text h3 .it{font-style:italic;color:var(--mint)}
+.case-text .desc{margin-top:24px;color:var(--fg-2);font-size:16px;line-height:1.6;max-width:560px}
+.case-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.case-tag{padding:8px 14px;border:1px solid var(--line-2);border-radius:99px;font-size:12px;color:var(--fg-2);font-family:ui-monospace,"Cascadia Mono",Menlo,monospace;letter-spacing:.05em}
+.case-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px;padding-top:28px;border-top:1px solid var(--line)}
+.case-stat .n{font-family:"Lora",serif;font-weight:300;font-size:42px;letter-spacing:-.02em;line-height:1;color:#fff}
+.case-stat .n .it{font-style:italic;color:var(--mint)}
+.case-stat .l{font-family:ui-monospace,"Cascadia Mono",Menlo,monospace;font-size:10px;color:var(--fg-3);letter-spacing:.1em;text-transform:uppercase;margin-top:8px;line-height:1.4}
+.case-link{margin-top:36px;display:inline-flex;align-items:center;gap:14px;padding:16px 24px;border-radius:99px;border:1px solid var(--mint);color:var(--mint);font-family:"Lora",serif;font-size:18px;transition:background .3s,color .3s}
+.case-link:hover{background:var(--mint);color:var(--ink)}
+.case-link .arr{font-style:italic}
+
 @media (max-width:1200px){
   .s-card{width:420px;height:520px;padding:24px}
   .s-card h3{font-size:38px}
@@ -95,6 +121,9 @@
   .chat-fab,.chat-foot textarea,.chat-foot .send,.chat-head .close,.q,.field input,.field textarea,.submit{cursor:pointer}
   .chat-overlay{padding:12px}
   .chat-window{width:min(420px,100%);height:min(620px,90vh);border-radius:18px;border:1px solid var(--line-2)}
+  section.case{padding:100px 24px}
+  .case-grid{gap:40px}
+  .case-stat .n{font-size:32px}
 }
 
 @media (max-width:768px){
@@ -106,4 +135,15 @@
   .chat-fab,.chat-foot textarea,.chat-foot .send,.chat-head .close,.q,.field input,.field textarea,.submit{cursor:pointer}
   .chat-overlay{padding:0}
   .chat-window{width:100%;height:100%;border-radius:0;border:0}
+  section.case{padding:80px 20px}
+  .case-head{grid-template-columns:1fr;gap:16px;margin-bottom:32px}
+  .case-head .num{font-size:64px}
+  .case-grid{grid-template-columns:1fr;gap:32px}
+  .case-logo{max-width:280px;margin:0 auto}
+  .case-text h3{font-size:32px}
+  .case-text .desc{font-size:15px}
+  .case-stats{gap:16px}
+  .case-stat .n{font-size:26px}
+  .case-stat .l{font-size:9px}
+  .case-link{font-size:16px;padding:14px 20px}
 }
