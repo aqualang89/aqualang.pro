@@ -30,12 +30,25 @@
     return el;
   };
 
+  // iOS: клавиатура накладывается поверх fixed-оверлея, не сжимая его — кнопка отправки уходит под клаву.
+  // Подгоняем оверлей под видимую область visualViewport, тогда foot всегда над клавиатурой
+  const vv = window.visualViewport;
+  const fitViewport = () => {
+    if (!vv || !overlay.classList.contains('open')) return;
+    overlay.style.top = vv.offsetTop + 'px';
+    overlay.style.bottom = 'auto';
+    overlay.style.height = vv.height + 'px';
+  };
+  const resetViewport = () => { overlay.style.top = overlay.style.bottom = overlay.style.height = ''; };
+  if (vv) vv.addEventListener('resize', fitViewport);
+
   const open = () => {
     overlay.classList.add('open');
     greet();
+    fitViewport();
     setTimeout(() => input.focus(), 200);
   };
-  const close = () => overlay.classList.remove('open');
+  const close = () => { overlay.classList.remove('open'); resetViewport(); };
 
   fab.addEventListener('click', open);
   closeBtn.addEventListener('click', close);

@@ -1,11 +1,11 @@
-const CACHE_NAME = 'aqualang-v2';
+const CACHE_NAME = 'aqualang-v3';
 const ASSETS = [
   '/',
   '/styles/base.css?v=7',
   '/styles/layout.css?v=7',
-  '/styles/components.css?v=7',
-  '/scripts/main.js?v=6',
-  '/scripts/chat-widget.js?v=6',
+  '/styles/components.css?v=8',
+  '/scripts/main.js?v=7',
+  '/scripts/chat-widget.js?v=7',
   '/scripts/hero-particles.js',
   '/scripts/hero-particles-2d.js?v=5',
   '/fonts/lora.css',

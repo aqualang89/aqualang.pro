@@ -123,13 +123,19 @@
       clearTimeout(resizeT);
       resizeT = setTimeout(setHScroll, 120);
     });
+    let ticking = false;
     const onScroll = () => {
-      const r = hScroll.getBoundingClientRect();
-      const distance = +hScroll.dataset.distance || 0;
-      if (r.top <= 0 && r.bottom >= window.innerHeight) {
-        const progress = Math.min(Math.max(-r.top / (hScroll.offsetHeight - window.innerHeight), 0), 1);
-        hTrack.style.transform = `translateX(${-progress * distance}px)`;
-      }
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const r = hScroll.getBoundingClientRect();
+        const distance = +hScroll.dataset.distance || 0;
+        if (r.top <= 0 && r.bottom >= window.innerHeight) {
+          const progress = Math.min(Math.max(-r.top / (hScroll.offsetHeight - window.innerHeight), 0), 1);
+          hTrack.style.transform = `translateX(${-progress * distance}px)`;
+        }
+        ticking = false;
+      });
     };
     if (window.__lenis) window.__lenis.on('scroll', onScroll); else window.addEventListener('scroll', onScroll, { passive: true });
   }

@@ -80,7 +80,7 @@
 .msg.bot{align-self:flex-start;background:var(--bg-3);color:var(--fg);border-bottom-left-radius:4px}
 .msg.bot.typing{color:var(--fg-3);font-style:italic}
 .chat-foot{border-top:1px solid var(--line);padding:14px;display:flex;gap:8px;align-items:flex-end}
-.chat-foot textarea{flex:1;background:var(--bg-3);border:1px solid var(--line);border-radius:12px;padding:10px 14px;color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px;resize:none;outline:none;min-height:42px;max-height:120px;cursor:none}
+.chat-foot textarea{flex:1;background:var(--bg-3);border:1px solid var(--line);border-radius:12px;padding:10px 14px;color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;resize:none;outline:none;min-height:42px;max-height:120px;cursor:none}
 .chat-foot textarea:focus{border-color:var(--mint)}
 .chat-foot .send{width:42px;height:42px;border-radius:50%;background:var(--mint);color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:none;transition:background .25s,transform .25s}
 .chat-foot .send:hover{background:var(--mint-2);transform:scale(1.06)}
