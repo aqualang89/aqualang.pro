@@ -1,12 +1,13 @@
-const CACHE_NAME = 'aqualang-v1';
+const CACHE_NAME = 'aqualang-v2';
 const ASSETS = [
   '/',
-  '/styles/base.css?v=6',
-  '/styles/layout.css?v=6',
-  '/styles/components.css?v=6',
+  '/styles/base.css?v=7',
+  '/styles/layout.css?v=7',
+  '/styles/components.css?v=7',
   '/scripts/main.js?v=6',
   '/scripts/chat-widget.js?v=6',
-  '/scripts/hero-particles.js?v=6',
+  '/scripts/hero-particles.js',
+  '/scripts/hero-particles-2d.js?v=5',
   '/fonts/lora.css',
   '/favicon.png',
   '/apple-touch-icon.png',
@@ -30,7 +31,11 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
-  e.respondWith(
-    caches.match(e.request).then(res => res || fetch(e.request))
-  );
+  // HTML/навигация — всегда из сети, кэш только офлайн-резерв. Иначе SW отдаёт старую страницу вечно
+  if (e.request.mode === 'navigate') {
+    e.respondWith(fetch(e.request).catch(() => caches.match('/')));
+    return;
+  }
+  // статика (css/js с ?v=, шрифты, картинки) — из кэша, нет в кэше → сеть
+  e.respondWith(caches.match(e.request).then(res => res || fetch(e.request)));
 });
