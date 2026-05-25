@@ -11,3 +11,12 @@ PROJECT_STATE.md
 .idea/
 .vscode/
 _reference/
+
+# AI-инфра и память — не в git (только код)
+PROJECT_CONTEXT.md
+AGENTS.md
+DESIGN.md
+MOBILE_CHECKLIST.md
+REMEMBER.md
+CLAUDE.md
+tasks/
